@@ -109,3 +109,6 @@ body, html {
         text-align: justify;
         margin-right: 30px;
       }
+h1 {
+          color: red;
+}
