@@ -30,7 +30,7 @@ body, html {
           z-index: 0;
       }
       #sidebar {
-          background: #DF314D;
+          background: green;
           position: absolute;
           width: 240px;
           height: 100%;
