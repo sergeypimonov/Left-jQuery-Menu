@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Left Menu Project</title>
+    <script type="text/javascript" src="jquery.js"></script>
+
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+    
+    <script type="text/javascript">
+      $(window).load(function(){
+        $("[data-toggle]").click(function() {
+          var toggle_el = $(this).data("toggle");
+          $(toggle_el).toggleClass("open-sidebar");
+        });
+         $(".swipe-area").swipe({
+              swipeStatus:function(event, phase, direction, distance, duration, fingers)
+                  {
+                      if (phase=="move" && direction =="right") {
+                           $(".container").addClass("open-sidebar");
+                           return false;
+                      }
+                      if (phase=="move" && direction =="left") {
+                           $(".container").removeClass("open-sidebar");
+                           return false;
+                      }
+                  }
+          }); 
+      });
+      
+	</script>
+</head>
+<body>
+    <div class="container">
+      <div id="sidebar">
+          <ul>
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Статьи</a></li>
+              <li><a href="#">Видео</a></li>
+                  <li><a href="#">Выход</a></li>
+          </ul>
+      </div>
+      <div class="main-content">
+          <div class="swipe-area"></div>
+          <a href="#" data-toggle=".container" id="sidebar-toggle">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </a>
+          <div class="content">
+              <h1>Выезжающее меню для Web-сайта</h1>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, eos rerum. Accusantium magnam pariatur mollitia quam sunt neque, error deserunt delectus qui non. Dolorum accusantium eos atque necessitatibus numquam aperiam.
+              Pariatur culpa architecto accusamus quisquam nihil, qui esse suscipit, cumque minima, nostrum nobis dolores. Dolorem commodi eaque sequi distinctio, neque deleniti vel veniam sed, harum magnam voluptates perspiciatis consectetur fugit!
+              Ullam repellendus possimus exercitationem aut amet laboriosam maxime molestiae vitae consequuntur corrupti, ipsa temporibus maiores soluta nemo accusamus incidunt, tenetur rerum, corporis itaque sequi ducimus odio! Enim voluptas ratione aliquam?
+              Fugit aliquid facere, tempora itaque, perferendis consequuntur ut debitis soluta autem ipsam, temporibus minima nesciunt esse? Quae praesentium eligendi consequuntur saepe et, commodi neque quidem illum officia id sint iste.
+              Commodi pariatur perferendis et iure adipisci dolor sunt, earum ea unde in eaque, cumque, vitae labore? Sunt nemo quasi odit velit, explicabo similique, consectetur tempora exercitationem fugiat ducimus iure dolores.
+              Laborum voluptatibus eveniet minima fuga? Impedit nam sit optio error laborum eligendi, maiores, quis tenetur magni cum facere, sapiente omnis vitae recusandae minus id architecto officia ipsam? Minima, ullam voluptatem?
+              Iusto dolore sunt minima reiciendis numquam molestias impedit. Consequatur enim reiciendis quae dolorum exercitationem vero sint voluptas odit, ratione consectetur repellat. Ipsum fugit harum et adipisci consequuntur placeat quisquam incidunt.
+              Perspiciatis nulla fugiat consequatur rem! Natus beatae officia accusantium quas esse dolore veritatis, mollitia dolores harum nobis sint sapiente nisi recusandae deleniti ipsum sed ipsa, quod facilis quaerat nesciunt pariatur!
+              Magni aperiam assumenda provident ut cum optio repellendus quo asperiores eius modi, reiciendis, nobis unde voluptatum numquam quos, deserunt dolorum commodi animi? Temporibus numquam quos maiores sint fuga veritatis suscipit!
+              Aliquam, voluptatibus non quo molestiae repudiandae excepturi unde veniam enim ipsam maxime nam aliquid, neque, nihil pariatur reiciendis voluptate asperiores eveniet. Repudiandae cupiditate ducimus enim illo repellendus nobis quos fuga!
+              Natus nemo facilis placeat rem eaque nulla, hic possimus eius vero, ad culpa velit suscipit eos ab unde! Commodi modi quod, veniam facere iure tempora iste ex fugit ipsam perferendis.
+              Doloribus est incidunt dolor molestiae, illo dicta sequi aspernatur quia! Enim rem, minima excepturi velit beatae labore molestiae placeat, qui totam laborum deleniti similique et impedit facilis error minus expedita?
+              Non ut odit quasi fugit repudiandae, a reiciendis laboriosam molestiae iusto, totam error culpa nulla quas dicta, impedit officiis. Voluptatem voluptatibus, doloribus enim quidem ab explicabo repellat fugiat tempora temporibus.
+              Esse architecto asperiores iure quas inventore voluptatum voluptates tempore, facilis laboriosam debitis, accusamus odit consequatur doloribus! Delectus expedita dignissimos, rem accusantium pariatur sunt amet, alias sint vero quasi, esse eveniet!
+              Necessitatibus facere accusantium sit incidunt, libero reiciendis suscipit facilis nam illum labore beatae, quia sapiente tenetur aliquam. Possimus voluptatibus architecto deleniti aspernatur praesentium quibusdam quae libero, cupiditate vero fugit provident?</p>
+          </div>
+      </div>
+    </div>    
+</body>
+</html>
